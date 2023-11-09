@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homework 8</h1>
+    <a href= "./hw8_map.png"><img src="./hw8_map.png" width = 1000 alt=""></a><br>
+    <h2>Question: Which public k-12 schools in north Mecklenburg county have a public bus stop within walking distance?</h2>
+    <h3>*Walking distance defined as 1/2 mile*</h3>
+    <p>For my analysis, I imported vectors of points of CMS schools and points of CATS bus stops. I first started by adding
+        a 1/2 mile buffer around each bus stop, operationalizing this buffer as walking distance. Then, I used the intersection tool
+        to find which CMS school points intersect with the 1/2 mile buffer around each bus stop. I defined these intersected points
+        as the schools that are within walking distance of a bus stop. Then, I used the difference tool to find the difference of school points and 
+        the 1/2 mile buffer. I then defined those points as schools that don't have a bus stop within walking distance. Finally, I changed the 
+        colors of the intersected points to green and the colors of difference points to red, making the example more visual. As seen in the map,
+        the green points are schools that have a bus stop in a 1/2 mile walking distance and the points in red represent schools without 
+        a bus stop in walking distance.
+    </p>
+    <a href = "./walk_distance_busstop.csv"><br>Buffer - Walking Distance from Bus Stop CSV File</a>
+    <a href = "./schools_with_stop.csv"><br>Intersection - Schools With Stop in Walking Distance CSV</a>
+    <a href = "schools_no_stop.csv"><br>Difference - Schools Without Stop in Walking Distance CSV</a>
+    <a href = "https://maps.mecknc.gov/openmapping/data.html"><br>Original Data</a>
+</body>
+</html>
